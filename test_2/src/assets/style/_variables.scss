@@ -2,45 +2,64 @@
 $main_bg: #0e1014;
 $button: #4077f3;
 $red_light: #961a1a;
+$purple: #833ab4;
 $color_light: #e4e5ea;
 $dark_grey: #656566;
 
+$shadow_welbex: 0px 4px 4px rgba(0, 0, 0, 0.25);
 $gradient_title: linear-gradient(90deg, #fcb045 36.99%, #fd1d1d 100%);
-$gradient_header: linear-gradient(#fcb045, #ff3f78);
+$gradient_header: linear-gradient(90deg, #fcb045, #ff3f78);
 
-$typography1: (
- font-size: 48px,
- font-style: normal,
- font-weight: 400,
-);
-$typography2: (
- font-size: 18px,
- font-style: normal,
- font-weight: 500,
-);
+$desktop:1200px;
 
-$typography3: (
- font-size: 18px,
- font-style: normal,
- font-weight: 400,
-);
-$typography4: (
- font-size: 16px,
- font-style: normal,
- font-weight: 500,
-);
-$typography5: (
- font-size: 16px,
- font-style: normal,
- font-weight: 400,
-);
-$typography6: (
- font-size: 12px,
- font-style: normal,
- font-weight: 400,
-);
-$typography7: (
- font-size: 10px,
- font-style: normal,
- font-weight: 300,
-);
+@mixin typography1 {
+ font-size: 48px;
+ font-style: normal;
+ font-weight: 400;
+}
+@mixin typography1_1 {
+ font-size: 48px;
+ font-style: normal;
+ font-weight: 900;
+}
+@mixin typography_gradient {
+ font-size: 18px;
+ font-style: normal;
+ font-weight: 700;
+}
+@mixin typography2 {
+ font-size: 18px;
+ font-style: normal;
+ font-weight: 500;
+}
+
+@mixin typography3 {
+ font-size: 18px;
+ font-style: normal;
+ font-weight: 400;
+}
+@mixin typography4 {
+ font-size: 16px;
+ font-style: normal;
+ font-weight: 500;
+}
+@mixin typography5 {
+ font-size: 16px;
+ font-style: normal;
+ font-weight: 400;
+}
+@mixin typography_footer_title {
+ font-size: 14px;
+ font-style: normal;
+ font-weight: 700;
+}
+@mixin typography6 {
+ font-size: 12px;
+ font-style: normal;
+ font-weight: 400;
+}
+@mixin typography7 {
+ font-size: 10px;
+ font-style: normal;
+ font-weight: 300;
+}

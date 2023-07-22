@@ -1,0 +1,51 @@
+@import "../../../assets/style/variables.scss";
+
+.mainInfo {
+ .redBlur {
+  position: absolute;
+  width: 311px;
+  height: 311px;
+  border-radius: 311px;
+  background-color: $red_light;
+  filter: blur(196px);
+  left: -250px;
+  opacity: 0.5;
+  border-radius: 100%;
+  z-index: -1;
+ }
+
+ h1 {
+  @include typography1;
+ }
+ .welbex {
+  @include typography1_1;
+  text-shadow: $shadow_welbex;
+  background: $gradient_header;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  span {
+   text-transform: uppercase;
+  }
+ }
+ p {
+  @include typography3;
+  margin-top: 30px;
+ }
+}
+@media screen and (max-width: 600px) {
+ .mainInfo {
+  .redBlur {
+   position: absolute;
+   width: 210px;
+   height: 210px;
+   bottom: 0;
+   background-color: $red_light;
+  //  filter: blur(196px);
+   left: -57px;
+   opacity: 0.5;
+   border-radius: 100%;
+   z-index: -1;
+  }
+ }
+}

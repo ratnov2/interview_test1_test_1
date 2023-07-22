@@ -1,0 +1,102 @@
+@import "../../../assets/style/variables.scss";
+
+.otherInfo {
+ text-align: right;
+ h3 {
+  width: fit-content;
+  background: $gradient_title;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: auto;
+  margin-bottom: 40px;
+  .text {
+   @include typography2;
+   -webkit-text-fill-color: $color_light;
+  }
+  .grad {
+   @include typography_gradient;
+   text-transform: uppercase;
+  }
+ }
+ .container {
+  text-align: right;
+  ul {
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+   gap: 30px 30px;
+   grid-template-areas:
+    ". ."
+    ". .";
+   li {
+    h4 {
+     @include typography2;
+     text-transform: uppercase;
+    }
+    p {
+     margin-top: 6px;
+     @include typography5;
+     font-family: "Montserrat", sans-serif;
+    }
+   }
+  }
+ }
+ .button button {
+  @include typography4;
+  font-family: "Inter", sans-serif;
+  border-radius: 0;
+  border: 0;
+  padding: 21px 35px;
+  background-color: $button;
+  color: $color_light;
+  margin-top: 61px;
+  cursor: pointer;
+ }
+}
+
+@media screen and (max-width: 750px) {
+ .otherInfo {
+  margin-top: 45px;
+  text-align: left;
+  h3 {
+   margin-left: 0;
+  }
+  .container {
+   text-align: left;
+  }
+  .button {
+   text-align: center;
+  }
+ }
+}
+
+@media screen and (max-width: 750px) {
+ .otherInfo {
+  h3 {
+   .grad {
+    text-transform: lowercase;
+   }
+  }
+  .container {
+   ul {
+    li {
+     position: relative;
+     p {
+      display: none;
+     }
+     h4 {
+      margin-left: 20px;
+      &::before {
+       content: "";
+       width: 10px;
+       height: 1px;
+       left: 0;
+       top: 10px;
+       position: absolute;
+       background: $gradient_title;
+      }
+     }
+    }
+   }
+  }
+ }
+}

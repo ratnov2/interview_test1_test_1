@@ -1,0 +1,82 @@
+@import "../../assets/style/variables.scss";
+
+.footer {
+ .firstUl {
+  display: flex;
+  justify-content: space-between;
+  ul {
+   li {
+    margin-bottom: 10px;
+    @include typography5;
+   }
+   .head {
+    @include typography_footer_title;
+    color: $dark_grey;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+   }
+   .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 52px;
+    grid-auto-flow: row;
+    grid-template-areas:
+     ". ."
+     ". ."
+     ". ."
+     ". ."
+     ". .";
+   }
+  }
+ }
+ .lastUl {
+  text-align: right;
+  justify-content: end;
+ }
+ .svgNavigation {
+  display: flex;
+  margin-top: 21px;
+  margin-bottom: 19px;
+  justify-content: end;
+ }
+}
+.copyright {
+ margin-top: 33px;
+ @include typography6;
+ font-family: "Montserrat", sans-serif;
+ text-align: right;
+ p {
+  margin-bottom: 5px;
+ }
+ a {
+  text-decoration: underline;
+ }
+ padding-bottom: 20px;
+}
+.styleShare {
+ img {
+  margin-left: 5px;
+ }
+}
+
+@media screen and (max-width: 650px) {
+ .footer {
+  .firstUl {
+   flex-direction: column;
+  }
+  .lastUl {
+   text-align: left;
+   .svgNavigation {
+    justify-content: left;
+   }
+  }
+ }
+ .copyright {
+  text-align: left;
+ }
+}
+@media screen and (max-width: 600px) {
+ .footer {
+  padding: 45px 15px;
+ }
+}

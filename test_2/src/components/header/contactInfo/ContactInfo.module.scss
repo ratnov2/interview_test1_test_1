@@ -1,0 +1,43 @@
+.contactInfo {
+ ul {
+  display: flex;
+  align-items: center;
+  .firstLi {
+   margin-right: 37px;
+   margin-left: 10px;
+  }
+  li {
+   &:last-child {
+    margin-right: 0;
+   }
+  }
+ }
+ .styleShare {
+  img {
+   margin: 0 10px;
+  }
+ }
+}
+@media screen and (min-width: 1000px) and (max-width: 1050px) {
+ .contactInfo {
+  ul {
+   .firstLi {
+    margin-right: 10px;
+   }
+  }
+ }
+}
+@media screen and (max-width: 1000px) {
+ .contactInfo {
+  ul {
+   .firstLi {
+    display: none;
+   }
+  }
+ }
+}
+@media screen and (max-width: 800px) {
+ .contactInfo {
+  display: none;
+ }
+}
